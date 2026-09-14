@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wholesome Family Healthy Lifestyle</title>
+<meta name="description" content="A real life system for sustainable family health. No extreme diets, no shame, just a process you can actually repeat." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#F7F4EC',
+          creamdark: '#EFEAE0',
+          forest: '#1E5B41',
+          forestdark: '#123726',
+          forestlight: '#2F7A57',
+          gold: '#C99A4B',
+          golddark: '#A87C34',
+          navy: '#182B3A',
+          ink: '#1B241D',
+          wood: '#8A5A3B'
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+  h1, h2, h3, .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+  .curve-bottom {
+    border-bottom-left-radius: 50% 4%;
+    border-bottom-right-radius: 50% 4%;
+  }
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #C99A4B;
+    outline-offset: 2px;
+  }
+  .card-hover { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -18px rgba(18,55,38,0.35); }
+</style>
+</head>
+<body class="bg-cream text-ink antialiased">
+
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-forest focus:text-white focus:px-5 focus:py-3 focus:rounded-full font-semibold">Skip to main content</a>
+
+<!-- ============ NAV ============ -->
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b border-forest/10">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#top" class="flex items-center gap-3 group">
+        <span class="w-11 h-11 rounded-full bg-forest text-cream flex items-center justify-center font-serif text-lg font-bold flex-shrink-0">WF</span>
+        <span class="leading-tight">
+          <span class="block font-serif text-lg sm:text-xl font-bold text-forestdark">Wholesome Family</span>
+          <span class="block text-[11px] sm:text-xs tracking-[0.2em] uppercase text-wood font-semibold">Healthy Lifestyle</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-[15px] font-semibold text-ink/80" aria-label="Primary">
+        <a href="#story" class="hover:text-forest transition-colors">Our Story</a>
+        <a href="#modules" class="hover:text-forest transition-colors">The Program</a>
+        <a href="#tools" class="hover:text-forest transition-colors">Tools</a>
+        <a href="#family" class="hover:text-forest transition-colors">Family Impact</a>
+        <a href="#faq" class="hover:text-forest transition-colors">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#start" class="hidden sm:inline-flex items-center justify-center rounded-full bg-forest hover:bg-forestdark text-cream font-semibold px-5 py-2.5 text-sm shadow-sm transition-colors">
+          Start Your One Change
+        </a>
+        <button id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-forest/30 text-forest" aria-label="Open menu">
+          <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden lg:hidden border-t border-forest/10 bg-cream">
+    <nav class="max-w-7xl mx-auto px-5 py-4 flex flex-col gap-1 text-base font-semibold text-ink/85" aria-label="Mobile">
+      <a href="#story" class="py-3 border-b border-forest/10">Our Story</a>
+      <a href="#modules" class="py-3 border-b border-forest/10">The Program</a>
+      <a href="#tools" class="py-3 border-b border-forest/10">Tools</a>
+      <a href="#family" class="py-3 border-b border-forest/10">Family Impact</a>
+      <a href="#faq" class="py-3 border-b border-forest/10">FAQ</a>
+      <a href="#start" class="mt-4 inline-flex items-center justify-center rounded-full bg-forest text-cream font-semibold px-5 py-3">Start Your One Change</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ============ HERO ============ -->
+<section id="top" class="relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 pt-14 pb-20 lg:pt-20 lg:pb-28 grid lg:grid-cols-2 gap-12 lg:gap-10 items-center">
+    <div>
+      <span class="inline-flex items-center gap-2 rounded-full bg-forest/10 text-forestdark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+        A Podcast and Program for Real Families
+      </span>
+      <h1 class="mt-6 font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] text-forestdark">
+        Real Families. Real Food. A Healthier Tomorrow.
+      </h1>
+      <p class="mt-5 text-lg sm:text-xl text-wood font-semibold font-serif italic">
+        One Person. One Family. One Change.
+      </p>
+      <p class="mt-6 text-base sm:text-lg text-ink/80 leading-relaxed max-w-xl">
+        You have tried the diets. Lost the weight. Gained it back, maybe more than once. It was never a willpower problem, it was the wrong system. Wholesome Family Healthy Lifestyle is built for parents ready to break the cycle for good, not through more restriction, but through a process you can actually repeat.
+      </p>
+      <div class="mt-9 flex flex-col sm:flex-row gap-4">
+        <a href="#start" class="inline-flex items-center justify-center rounded-full bg-forest hover:bg-forestdark text-cream font-bold px-7 py-4 text-base shadow-lg shadow-forest/20 transition-colors">
+          Start the Program
+        </a>
+        <a href="#story" class="inline-flex items-center justify-center rounded-full border-2 border-forest text-forestdark hover:bg-forest hover:text-cream font-bold px-7 py-4 text-base transition-colors">
+          Listen to the Podcast
+        </a>
+      </div>
+
+      <dl class="mt-12 grid grid-cols-3 gap-4 max-w-md">
+        <div>
+          <dt class="sr-only">Modules</dt>
+          <dd class="font-serif text-2xl sm:text-3xl font-extrabold text-forest">6</dd>
+          <dd class="text-xs sm:text-sm text-ink/70 font-semibold mt-1">Modules</dd>
+        </div>
+        <div>
+          <dt class="sr-only">Episodes planned</dt>
+          <dd class="font-serif text-2xl sm:text-3xl font-extrabold text-forest">20</dd>
+          <dd class="text-xs sm:text-sm text-ink/70 font-semibold mt-1">Episodes Planned</dd>
+        </div>
+        <div>
+          <dt class="sr-only">System</dt>
+          <dd class="font-serif text-2xl sm:text-3xl font-extrabold text-forest">1</dd>
+          <dd class="text-xs sm:text-sm text-ink/70 font-semibold mt-1">Simple System</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="relative">
+      <div class="rounded-[2rem] overflow-hidden shadow-2xl shadow-forest/20 border-4 border-white">
+        <img src="https://placehold.co/900x1000/1E5B41/F7F4EC?text=A+Family+Cooking+Together&font=playfair-display" alt="A parent and child preparing a meal together in a warm kitchen" class="w-full h-full object-cover" loading="eager" width="900" height="1000" />
+      </div>
+      <div class="absolute -bottom-6 -left-6 sm:-left-10 bg-white rounded-2xl shadow-xl p-5 max-w-[240px] hidden sm:block">
+        <p class="font-serif text-forestdark font-bold text-sm leading-snug">"You don't have to suffer to win."</p>
+        <p class="text-xs text-ink/60 mt-2 font-semibold">Our first promise to you</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEET ALEX / PROBLEM ============ -->
+<section id="story" class="bg-white py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="order-2 lg:order-1 rounded-[2rem] overflow-hidden shadow-xl">
+        <img src="https://placehold.co/900x700/EFEAE0/1E5B41?text=Meet+Alex%2C+The+Cycle+Breaker&font=playfair-display" alt="A parent standing in a kitchen with children in the background" class="w-full h-full object-cover" loading="lazy" width="900" height="700" />
+      </div>
+      <div class="order-1 lg:order-2">
+        <span class="inline-flex items-center gap-2 rounded-full bg-gold/15 text-golddark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+          You Are Not Alone In This
+        </span>
+        <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">Meet Alex, The Cycle Breaker</h2>
+        <p class="mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">
+          Alex is 28 to 45 years old, a parent or caregiver, often a woman but increasingly a man too. Alex has lost weight before and gained it back, sometimes more than once. The cycle feels personal and exhausting. What Alex wants is not another diet. Alex wants change that lasts, for the whole family, not just a number on a scale. If that sounds familiar, you are in the right place.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="rounded-2xl border border-forest/10 bg-cream p-6 card-hover">
+        <div class="w-12 h-12 rounded-xl bg-forest/10 flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-6 h-6 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75c0 1.5-1.5 3-1.5 3M14.25 9.75c0 1.5 1.5 3 1.5 3M8.25 16.5a3.75 3.75 0 007.5 0M12 3a9 9 0 100 18 9 9 0 000-18z" /></svg>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-forestdark">Willpower Fatigue</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">Tired of restrictive diets that demand everything and deliver burnout. You have white knuckled it before, and lost.</p>
+      </div>
+      <div class="rounded-2xl border border-forest/10 bg-cream p-6 card-hover">
+        <div class="w-12 h-12 rounded-xl bg-forest/10 flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-6 h-6 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-forestdark">The Shame Cycle</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">Lose weight, regain it, feel like a personal failure. The pattern becomes identity: "I just can't do this."</p>
+      </div>
+      <div class="rounded-2xl border border-forest/10 bg-cream p-6 card-hover">
+        <div class="w-12 h-12 rounded-xl bg-forest/10 flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-6 h-6 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm6-4a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-forestdark">Family Pressure</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">Wants to model healthy habits for the kids, not deprivation or obsession. The stakes feel bigger than yourself, they feel generational.</p>
+      </div>
+      <div class="rounded-2xl border border-forest/10 bg-cream p-6 card-hover">
+        <div class="w-12 h-12 rounded-xl bg-forest/10 flex items-center justify-center mb-4" aria-hidden="true">
+          <svg class="w-6 h-6 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        </div>
+        <h3 class="font-serif text-lg font-bold text-forestdark">Real Life Friction</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">Diets do not account for busy schedules, social events, or real cravings. Life does not pause for a meal plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MYTHS ============ -->
+<section class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-2 rounded-full bg-forest/10 text-forestdark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+        Rewriting The Story
+      </span>
+      <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">The Beliefs Keeping You Stuck</h2>
+      <p class="mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">These are the false beliefs that keep so many parents stuck in the cycle. Naming them is the first step to rewriting the story.</p>
+    </div>
+
+    <div class="mt-12 grid sm:grid-cols-2 gap-5">
+      <div class="rounded-2xl bg-white border-l-4 border-golddark p-6 shadow-sm">
+        <p class="text-xs font-bold tracking-wide uppercase text-golddark">Myth</p>
+        <h3 class="mt-1 font-serif text-lg font-bold text-forestdark">Discipline Equals Results</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">More restriction means more progress. Push harder, suffer more.</p>
+      </div>
+      <div class="rounded-2xl bg-white border-l-4 border-golddark p-6 shadow-sm">
+        <p class="text-xs font-bold tracking-wide uppercase text-golddark">Myth</p>
+        <h3 class="mt-1 font-serif text-lg font-bold text-forestdark">Success Means Sacrifice</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">You have to cut out the foods you love. Forever.</p>
+      </div>
+      <div class="rounded-2xl bg-white border-l-4 border-golddark p-6 shadow-sm">
+        <p class="text-xs font-bold tracking-wide uppercase text-golddark">Myth</p>
+        <h3 class="mt-1 font-serif text-lg font-bold text-forestdark">One Hard Day Means Starting Over</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">A single tough meal means waiting until Monday to begin again.</p>
+      </div>
+      <div class="rounded-2xl bg-white border-l-4 border-golddark p-6 shadow-sm">
+        <p class="text-xs font-bold tracking-wide uppercase text-golddark">Myth</p>
+        <h3 class="mt-1 font-serif text-lg font-bold text-forestdark">Willpower Is Something You're Born With</h3>
+        <p class="mt-2 text-sm text-ink/75 leading-relaxed">Some people have it, some don't, and that becomes the whole story.</p>
+      </div>
+    </div>
+
+    <!-- Truth section -->
+    <div class="mt-16 rounded-[2rem] bg-forestdark text-cream p-8 sm:p-12 grid lg:grid-cols-3 gap-8">
+      <div class="lg:col-span-3">
+        <h3 class="font-serif text-2xl sm:text-3xl font-extrabold">What You Actually Need to Hear</h3>
+      </div>
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold">The Best Plan Is One You Can Repeat</h4>
+        <p class="mt-2 text-sm text-cream/80 leading-relaxed">Not the most extreme. Not the most restrictive. The one that fits real life, and keeps working because of it.</p>
+      </div>
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold">Sustainability Beats Perfection</h4>
+        <p class="mt-2 text-sm text-cream/80 leading-relaxed">Real food, right amounts, no deprivation. Progress that does not require suffering to be valid.</p>
+      </div>
+      <div>
+        <h4 class="font-serif text-lg font-bold text-gold">This Is For Your Whole Family</h4>
+        <p class="mt-2 text-sm text-cream/80 leading-relaxed">Not just you. Not just weight loss. A healthier home, a better model for your kids, a future worth building.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THREE PILLARS ============ -->
+<section class="bg-white py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto">
+      <span class="inline-flex items-center gap-2 rounded-full bg-gold/15 text-golddark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+        What We Stand On
+      </span>
+      <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">Three Promises We Build On</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <div class="rounded-2xl border border-forest/10 p-8 text-center card-hover">
+        <div class="w-14 h-14 rounded-full bg-forest text-cream flex items-center justify-center mx-auto mb-5" aria-hidden="true">
+          <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+        </div>
+        <p class="text-xs font-bold tracking-wide uppercase text-wood">Pillar One, Permission</p>
+        <h3 class="mt-2 font-serif text-xl font-bold text-forestdark">"You don't have to suffer to win."</h3>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Full release from the belief that pain equals progress. You get complete permission to pursue health without punishment.</p>
+      </div>
+      <div class="rounded-2xl border border-forest/10 p-8 text-center card-hover">
+        <div class="w-14 h-14 rounded-full bg-forest text-cream flex items-center justify-center mx-auto mb-5" aria-hidden="true">
+          <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        </div>
+        <p class="text-xs font-bold tracking-wide uppercase text-wood">Pillar Two, Process</p>
+        <h3 class="mt-2 font-serif text-xl font-bold text-forestdark">"Follow a system, not willpower."</h3>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">A repeatable, structured approach that does the heavy lifting, so you don't have to rely on self discipline alone.</p>
+      </div>
+      <div class="rounded-2xl border border-forest/10 p-8 text-center card-hover">
+        <div class="w-14 h-14 rounded-full bg-forest text-cream flex items-center justify-center mx-auto mb-5" aria-hidden="true">
+          <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm6-4a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+        </div>
+        <p class="text-xs font-bold tracking-wide uppercase text-wood">Pillar Three, Purpose</p>
+        <h3 class="mt-2 font-serif text-xl font-bold text-forestdark">"This is about your family's future."</h3>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Every action connects to something bigger than a scale. The real motivation lives in the people you come home to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MODULES / PROGRAM ============ -->
+<section id="modules" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-2 rounded-full bg-forest/10 text-forestdark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+        The Program
+      </span>
+      <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">Inside the Program</h2>
+      <p class="mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">Six modules that take you from understanding the cycle to living a sustainable, family centered lifestyle.</p>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-5">
+      <div class="rounded-2xl bg-white p-7 shadow-sm border border-forest/10 card-hover">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif font-bold text-sm">01</span>
+        <h3 class="mt-4 font-serif text-xl font-bold text-forestdark">Understanding the Cycle</h3>
+        <p class="text-sm text-wood font-semibold mt-1">Why Diets Fail</p>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Unpack the pattern that keeps repeating: restrictive dieting, the willpower myth, the statistic that most diets fail, and the shame cycle that starts it all over again.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-7 shadow-sm border border-forest/10 card-hover">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif font-bold text-sm">02</span>
+        <h3 class="mt-4 font-serif text-xl font-bold text-forestdark">The Sustainability Framework</h3>
+        <p class="text-sm text-wood font-semibold mt-1">Systems Over Willpower</p>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Shift from temporary fixes to lasting change. Learn the difference between diets and systems, how to stack new habits onto routines you already have, and how to design your surroundings so healthy choices become the default.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-7 shadow-sm border border-forest/10 card-hover">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif font-bold text-sm">03</span>
+        <h3 class="mt-4 font-serif text-xl font-bold text-forestdark">Real Food, Real Life</h3>
+        <p class="text-sm text-wood font-semibold mt-1">Nutrition Without Deprivation</p>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Redefine healthy eating around balanced nutrition, mindful portions, eating out and social events, and managing cravings without guilt, all without deprivation.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-7 shadow-sm border border-forest/10 card-hover">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif font-bold text-sm">04</span>
+        <h3 class="mt-4 font-serif text-xl font-bold text-forestdark">Movement and Energy</h3>
+        <p class="text-sm text-wood font-semibold mt-1">Exercise as a Lifestyle, Not Punishment</p>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Reframe exercise as a source of joy and connection. Find movement you actually enjoy, build small sustainable habits, and use activity to bond with your family.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-7 shadow-sm border border-forest/10 card-hover">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif font-bold text-sm">05</span>
+        <h3 class="mt-4 font-serif text-xl font-bold text-forestdark">Mindset Mastery</h3>
+        <p class="text-sm text-wood font-semibold mt-1">Breaking the Shame Cycle</p>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Reframe failure as feedback, practice self compassion, choose progress over perfection, manage setbacks, and build the kind of confidence that sustains long term change.</p>
+      </div>
+      <div class="rounded-2xl bg-white p-7 shadow-sm border border-forest/10 card-hover">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif font-bold text-sm">06</span>
+        <h3 class="mt-4 font-serif text-xl font-bold text-forestdark">Accountability and Community</h3>
+        <p class="text-sm text-wood font-semibold mt-1">The Power of Connection</p>
+        <p class="mt-3 text-sm text-ink/75 leading-relaxed">Build the support system that keeps change going. Connect with a community and track progress with tools built for encouragement, not judgment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOOLS ============ -->
+<section id="tools" class="bg-white py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl">
+      <span class="inline-flex items-center gap-2 rounded-full bg-gold/15 text-golddark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+        Turning Insight Into Action
+      </span>
+      <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">Tools You'll Actually Use</h2>
+      <p class="mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">Simple, repeatable tools that turn what you learn into what you do.</p>
+    </div>
+
+    <!-- Goal Tracker -->
+    <div class="mt-14">
+      <h3 class="font-serif text-2xl font-bold text-forestdark">The Three Tier Goal Framework</h3>
+      <p class="mt-3 text-ink/75 max-w-2xl">Set meaningful, sustainable goals aligned with your real why: your family, your health, your legacy.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-5">
+        <div class="rounded-2xl bg-cream border border-forest/10 p-6">
+          <p class="text-xs font-bold tracking-wide uppercase text-wood">01</p>
+          <h4 class="mt-2 font-serif text-lg font-bold text-forestdark">Ninety Day Goals</h4>
+          <p class="text-xs font-semibold text-ink/60 mb-2">The Big Picture</p>
+          <p class="text-sm text-ink/75 leading-relaxed">What do you want to achieve in the next three months? Example: build a positive relationship with food and stop the shame cycle.</p>
+        </div>
+        <div class="rounded-2xl bg-cream border border-forest/10 p-6">
+          <p class="text-xs font-bold tracking-wide uppercase text-wood">02</p>
+          <h4 class="mt-2 font-serif text-lg font-bold text-forestdark">Thirty Day Milestones</h4>
+          <p class="text-xs font-semibold text-ink/60 mb-2">Monthly Checkpoints</p>
+          <p class="text-sm text-ink/75 leading-relaxed">Break your ninety day goal into three monthly targets: foundation building, deepening and integration, then sustainability and momentum.</p>
+        </div>
+        <div class="rounded-2xl bg-cream border border-forest/10 p-6">
+          <p class="text-xs font-bold tracking-wide uppercase text-wood">03</p>
+          <h4 class="mt-2 font-serif text-lg font-bold text-forestdark">Weekly Wins</h4>
+          <p class="text-xs font-semibold text-ink/60 mb-2">Daily Momentum</p>
+          <p class="text-sm text-ink/75 leading-relaxed">What one to three small actions will you take this week? Small, repeatable wins build the momentum that lasts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Habit Tracker -->
+    <div class="mt-16">
+      <h3 class="font-serif text-2xl font-bold text-forestdark">The Weekly Habit Tracker</h3>
+      <p class="mt-3 text-ink/75 max-w-2xl leading-relaxed">Track three to five core habits with a simple, non judgmental system. The goal is progress, not perfection. Aim for about eighty percent consistency. If you miss a day, you simply continue the next one, you do not restart.</p>
+
+      <div class="mt-8 overflow-x-auto rounded-2xl border border-forest/10">
+        <table class="min-w-full text-sm text-left">
+          <caption class="sr-only">Sample weekly habit tracker showing seven habits tracked Monday through Sunday</caption>
+          <thead class="bg-forest text-cream">
+            <tr>
+              <th scope="col" class="px-4 py-3 font-semibold">Habit</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Mon</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Tue</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Wed</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Thu</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Fri</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Sat</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Sun</th>
+              <th scope="col" class="px-4 py-3 font-semibold text-center">Score</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-forest/10 bg-white">
+            <tr>
+              <th scope="row" class="px-4 py-3 font-semibold text-ink whitespace-nowrap">Water, 8 glasses</th>
+              <td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td>
+              <td class="px-4 py-3 text-center font-bold text-forestdark">7 / 7</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-3 font-semibold text-ink whitespace-nowrap">Movement, 30 min</th>
+              <td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-ink/30 font-bold">✕</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td>
+              <td class="px-4 py-3 text-center font-bold text-forestdark">6 / 7</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-3 font-semibold text-ink whitespace-nowrap">Mindful eating</th>
+              <td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td>
+              <td class="px-4 py-3 text-center font-bold text-forestdark">7 / 7</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-3 font-semibold text-ink whitespace-nowrap">Sleep, 7 to 9 hours</th>
+              <td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-ink/30 font-bold">✕</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td>
+              <td class="px-4 py-3 text-center font-bold text-forestdark">6 / 7</td>
+            </tr>
+            <tr>
+              <th scope="row" class="px-4 py-3 font-semibold text-ink whitespace-nowrap">Stress management</th>
+              <td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-ink/30 font-bold">✕</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td><td class="px-4 py-3 text-center text-forest font-bold">✓</td>
+              <td class="px-4 py-3 text-center font-bold text-forestdark">6 / 7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-xs text-ink/60">Sample tracker shown for illustration. Your version fills in as you go.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAMILY WELLNESS MULTIPLIER ============ -->
+<section id="family" class="py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full bg-forest/10 text-forestdark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+          Beyond Your Own Health
+        </span>
+        <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">The Family Wellness Multiplier</h2>
+        <p class="mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">Understanding how a parent's health journey creates a lasting legacy for their children.</p>
+
+        <div class="mt-8 space-y-6">
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-forestdark">Rippling Impact</h3>
+              <p class="text-sm text-ink/75 mt-1 leading-relaxed">Parental health changes directly shape children's habits and perceptions, setting a foundation for their future wellbeing.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-forestdark">Modeling Without Obsession</h3>
+              <p class="text-sm text-ink/75 mt-1 leading-relaxed">Demonstrate balanced choices, not restrictive rules. Show your kids how to live healthy, not just how to diet.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-forestdark">Shared Meal Planning</h3>
+              <p class="text-sm text-ink/75 mt-1 leading-relaxed">Involve the whole family in healthy meal prep and choices. Make nutrition a collaborative, positive experience.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="w-11 h-11 rounded-full bg-forest/10 flex items-center justify-center flex-shrink-0" aria-hidden="true">
+              <svg class="w-5 h-5 text-forest" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7m-9-9v9m0 0h6" /></svg>
+            </div>
+            <div>
+              <h3 class="font-serif font-bold text-forestdark">A Health First Home</h3>
+              <p class="text-sm text-ink/75 mt-1 leading-relaxed">Integrate movement, mindful eating, and emotional wellbeing into daily family life, until it simply becomes the default.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-[2rem] overflow-hidden shadow-xl">
+        <img src="https://placehold.co/900x900/C99A4B/182B3A?text=A+Parent+and+Child+in+the+Kitchen&font=playfair-display" alt="A parent and child laughing together while cooking" class="w-full h-full object-cover" loading="lazy" width="900" height="900" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NORTH STAR ============ -->
+<section class="bg-forestdark text-cream py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 text-center">
+    <span class="inline-flex items-center gap-2 rounded-full bg-cream/10 text-gold text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+      Our North Star
+    </span>
+    <h2 class="mt-5 font-serif text-3xl sm:text-5xl font-extrabold">One Person. One Family. One Change.</h2>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-8 text-left max-w-5xl mx-auto">
+      <div class="rounded-2xl bg-cream/5 border border-cream/15 p-7">
+        <h3 class="font-serif text-lg font-bold text-gold">Know Alex</h3>
+        <p class="mt-3 text-sm text-cream/80 leading-relaxed">Speak to the cycle breaker, the parent who has been here before and is ready to do it differently this time.</p>
+      </div>
+      <div class="rounded-2xl bg-cream/5 border border-cream/15 p-7">
+        <h3 class="font-serif text-lg font-bold text-gold">Honor the Struggle</h3>
+        <p class="mt-3 text-sm text-cream/80 leading-relaxed">We don't skip the hard part. Acknowledging real friction is what builds the trust that keeps you with us.</p>
+      </div>
+      <div class="rounded-2xl bg-cream/5 border border-cream/15 p-7">
+        <h3 class="font-serif text-lg font-bold text-gold">Make It Bigger</h3>
+        <p class="mt-3 text-sm text-cream/80 leading-relaxed">Every habit, every meal, every choice connects to the family sitting at your dinner table. That is the real why.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUSTAINABLE FUTURE / FINAL CTA ============ -->
+<section id="start" class="relative">
+  <div class="h-56 sm:h-72 overflow-hidden">
+    <img src="https://placehold.co/1600x500/8A5A3B/F7F4EC?text=Your+Sustainable+Future+Begins&font=playfair-display" alt="A person looking out over a sunrise, symbolizing a new beginning" class="w-full h-full object-cover" loading="lazy" width="1600" height="500" />
+  </div>
+
+  <div class="bg-cream py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8">
+      <div class="max-w-2xl">
+        <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">Your Sustainable Future Starts Today</h2>
+        <p class="mt-5 text-base sm:text-lg text-ink/80 leading-relaxed">This is not the end of a course. It is the beginning of a new chapter where sustainable wellness is simply part of your life.</p>
+      </div>
+
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl bg-white border border-forest/10">
+          <svg class="w-7 h-7 text-forest mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+          <h3 class="font-serif font-bold text-forestdark">Recap Your Transformation</h3>
+          <p class="mt-2 text-sm text-ink/75 leading-relaxed">From breaking old cycles to building new habits, you lay the groundwork for a truly sustainable approach to health.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-forest/10">
+          <svg class="w-7 h-7 text-forest mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+          <h3 class="font-serif font-bold text-forestdark">Ongoing Progress, Not Perfection</h3>
+          <p class="mt-2 text-sm text-ink/75 leading-relaxed">Embrace the journey ahead. Our tools and insights help you navigate real life challenges with consistency over fleeting perfection.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-forest/10">
+          <svg class="w-7 h-7 text-forest mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /></svg>
+          <h3 class="font-serif font-bold text-forestdark">Resources and Next Steps</h3>
+          <p class="mt-2 text-sm text-ink/75 leading-relaxed">Access continued learning, advanced strategies, and tailored guidance to keep your momentum strong.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-white border border-forest/10">
+          <svg class="w-7 h-7 text-forest mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 10-4-4 4 4 0 004 4zm6-4a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          <h3 class="font-serif font-bold text-forestdark">Community and Support</h3>
+          <p class="mt-2 text-sm text-ink/75 leading-relaxed">You are not alone. Connect with a supportive community and encouragement whenever you need it.</p>
+        </div>
+      </div>
+
+      <!-- CTA card -->
+      <div class="mt-16 rounded-[2rem] bg-forest text-cream p-8 sm:p-12 grid lg:grid-cols-2 gap-8 items-center">
+        <div>
+          <h3 class="font-serif text-2xl sm:text-3xl font-extrabold">Ready for Your One Change?</h3>
+          <p class="mt-4 text-cream/85 leading-relaxed">Join Wholesome Family Healthy Lifestyle and get the first module, the goal tracker, and the habit tracker sent straight to you. No pressure, no perfection required, just a real place to start.</p>
+        </div>
+        <form class="grid sm:grid-cols-[1fr_auto] gap-3" onsubmit="return false;">
+          <label for="email" class="sr-only">Email address</label>
+          <input id="email" type="email" required placeholder="you@example.com" class="rounded-full px-5 py-4 text-ink placeholder:text-ink/50 bg-cream focus:outline-none focus:ring-4 focus:ring-gold/40 text-base" />
+          <button type="submit" class="rounded-full bg-gold hover:bg-golddark text-navy font-bold px-7 py-4 text-base transition-colors">
+            Send Me Module One
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="bg-white py-20 sm:py-28">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8">
+    <div class="text-center">
+      <span class="inline-flex items-center gap-2 rounded-full bg-forest/10 text-forestdark text-xs sm:text-sm font-bold tracking-wide uppercase px-4 py-2">
+        Common Questions
+      </span>
+      <h2 class="mt-5 font-serif text-3xl sm:text-4xl font-extrabold text-forestdark">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="mt-12 space-y-4">
+      <details class="group rounded-2xl border border-forest/10 bg-cream p-6 open:shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer font-serif font-bold text-forestdark text-lg list-none">
+          Is this another restrictive diet program?
+          <svg class="w-5 h-5 text-forest flex-shrink-0 transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </summary>
+        <p class="mt-4 text-ink/75 leading-relaxed">No. The whole point is the opposite. This is a repeatable system built on real food, right amounts, and no deprivation. Sustainability beats perfection, every time.</p>
+      </details>
+      <details class="group rounded-2xl border border-forest/10 bg-cream p-6 open:shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer font-serif font-bold text-forestdark text-lg list-none">
+          What if I miss a day or slip up?
+          <svg class="w-5 h-5 text-forest flex-shrink-0 transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </summary>
+        <p class="mt-4 text-ink/75 leading-relaxed">You simply continue the next day. One hard meal does not undo your progress, and it never means waiting until Monday to start again. Progress over perfection is the whole framework.</p>
+      </details>
+      <details class="group rounded-2xl border border-forest/10 bg-cream p-6 open:shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer font-serif font-bold text-forestdark text-lg list-none">
+          Is this only for the person doing the program, or the whole family?
+          <svg class="w-5 h-5 text-forest flex-shrink-0 transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </summary>
+        <p class="mt-4 text-ink/75 leading-relaxed">It is built for the whole family. Every module connects your personal habits to shared meals, modeling for your kids, and a healthier home, not just a number on a scale.</p>
+      </details>
+      <details class="group rounded-2xl border border-forest/10 bg-cream p-6 open:shadow-sm">
+        <summary class="flex items-center justify-between cursor-pointer font-serif font-bold text-forestdark text-lg list-none">
+          How is the program structured?
+          <svg class="w-5 h-5 text-forest flex-shrink-0 transition-transform group-open:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+        </summary>
+        <p class="mt-4 text-ink/75 leading-relaxed">Six modules, a three tier goal framework (ninety day, thirty day, and weekly), and a simple weekly habit tracker. Everything is designed to be repeated, not perfected.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-cream/80">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div class="lg:col-span-2">
+        <div class="flex items-center gap-3">
+          <span class="w-11 h-11 rounded-full bg-gold text-navy flex items-center justify-center font-serif text-lg font-bold flex-shrink-0">WF</span>
+          <span class="leading-tight">
+            <span class="block font-serif text-lg font-bold text-cream">Wholesome Family</span>
+            <span class="block text-xs tracking-[0.2em] uppercase text-cream/60 font-semibold">Healthy Lifestyle</span>
+          </span>
+        </div>
+        <p class="mt-5 text-sm leading-relaxed max-w-sm text-cream/70">Real Families. Real Food. A Healthier Tomorrow. A conversational podcast and program for parents ready to build sustainable, shame free health habits, together with their family.</p>
+      </div>
+      <div>
+        <h3 class="font-serif font-bold text-cream mb-4">Explore</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#story" class="hover:text-gold transition-colors">Our Story</a></li>
+          <li><a href="#modules" class="hover:text-gold transition-colors">The Program</a></li>
+          <li><a href="#tools" class="hover:text-gold transition-colors">Tools</a></li>
+          <li><a href="#family" class="hover:text-gold transition-colors">Family Impact</a></li>
+          <li><a href="#faq" class="hover:text-gold transition-colors">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-serif font-bold text-cream mb-4">Stay Connected</h3>
+        <p class="text-sm text-cream/70 leading-relaxed">Get the first module and new episodes as they release.</p>
+        <a href="#start" class="mt-4 inline-flex items-center justify-center rounded-full bg-gold hover:bg-golddark text-navy font-bold px-5 py-2.5 text-sm transition-colors">Join the List</a>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-cream/10 flex flex-col sm:flex-row gap-3 justify-between items-center text-xs text-cream/60">
+      <p>&copy; 2026 Wholesome Family Healthy Lifestyle. Produced by The Freedom Remnant Studio.</p>
+      <p>One Person. One Family. One Change.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    var iconOpen = document.getElementById('iconOpen');
+    var iconClose = document.getElementById('iconClose');
+    if (!menuBtn || !mobileMenu) return;
+    menuBtn.addEventListener('click', function () {
+      var isHidden = mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
